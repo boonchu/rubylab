@@ -58,9 +58,12 @@ rvm rubies
 #  * - default
 $ ruby --version
 ruby 2.1.0p0 (2013-12-25 revision 44422) [x86_64-linux]
+```
 
 ##### RVM Gem Set
+
 * [learning basic of gemset](https://rvm.io/gemsets/basics)
+
 ```
 $ rvm use 2.1.0@myapp --create
 ruby-2.1.0 - #gemset created /home/bigchoo/.rvm/gems/ruby-2.1.0@myapp
