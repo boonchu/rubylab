@@ -11,7 +11,7 @@
 ```
 yum install -y ruby
 ```
-* install gpg key (rvm required)
+* install gpg key and compares the signature (requires by rvm)
 ```
 $ gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 gpg: keyring `/home/bigchoo/.gnupg/secring.gpg' created
@@ -28,11 +28,11 @@ gpg: Total number processed: 1
 gpg:              unchanged: 1
 ```
 
-* get most stable rvm
+* get most stable rvm version
 ```
 curl -L get.rvm.io | bash -s stable
 ```
-* run shell environment for rvm access
+* hook up with shell environments for rvm access
 ```
 source /home/bigchoo/.rvm/scripts/rvm
 ```
