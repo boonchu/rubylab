@@ -5,7 +5,7 @@
 ##### How to install Ruby on Rails
 
 ###### Ruby setup
-[learning ruby first](http://tryruby.org/levels/1/challenges/0)
+[Learning ruby first](http://tryruby.org/levels/1/challenges/0)
 
 * install ruby
 ```
@@ -62,7 +62,7 @@ ruby 2.1.0p0 (2013-12-25 revision 44422) [x86_64-linux]
 
 ##### RVM Gem Set
 
-* [learning basic of gemset](https://rvm.io/gemsets/basics)
+* [Learning basic of gemset](https://rvm.io/gemsets/basics)
 
 ```
 $ rvm use 2.1.0@myapp --create
@@ -71,9 +71,11 @@ ruby-2.1.0 - #generating myapp wrappers..........
 Using /home/bigchoo/.rvm/gems/ruby-2.1.0 with gemset myapp
 
 $ rvm gemset (empty|delete) myapp
+```
 
 ###### Ruby on Rails 
-http://railsforzombies.org/
+[Learning Ruby on Rails](http://railsforzombies.org/)
+```
 $ gem install rails
 $ gem list --local rails
 
