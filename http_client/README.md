@@ -8,7 +8,7 @@ $ sudo yum install ruby
 
 * filled user name and password from git to http_client.rb code
 
-* run command
+* run command to ping github API
 ```
 $ ruby http_client.rb
 #<Net::HTTPOK:0x0000000209d1c8>
