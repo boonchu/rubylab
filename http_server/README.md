@@ -63,5 +63,33 @@ $ curl -v -XGET http://localhost:8080/../../../../../../etc/passwd
 File not found
 ```
 * try [Rack Webserver Interface](http://rack.github.io/) or [Jekyll Markdown type Blogger](http://jekyllrb.com/) instead
+##### try with rack web server
+* install rack (if you do not have it)
+```
+$ gem list --local rack
+$ gem install rack
+```
+* prepare config.ru file
+```
+$ cat config.ru
+# config.ru
+#
+run Proc.new { |env| ['200', {'Content-Type' => 'text/html'}, ['get rack\'d']] }
+```
+* run rackup (it prevents vulnerability that previously test)
+```
+$ rackup config.ru
+[2015-02-12 10:16:43] INFO  WEBrick 1.3.1
+[2015-02-12 10:16:43] INFO  ruby 2.1.0 (2013-12-25) [x86_64-linux]
+[2015-02-12 10:16:43] INFO  WEBrick::HTTPServer#start: pid=4331 port=9292
+::1 - - [12/Feb/2015:10:17:01 -0800] "GET / HTTP/1.1" 200 - 0.0005
+::1 - - [12/Feb/2015:10:17:05 -0800] "GET / HTTP/1.1" 200 - 0.0003
+::1 - - [12/Feb/2015:10:17:12 -0800] "GET / HTTP/1.1" 200 - 0.0003
+::1 - - [12/Feb/2015:10:17:13 -0800] "GET / HTTP/1.1" 200 - 0.0003
+::1 - - [12/Feb/2015:10:17:17 -0800] "GET / HTTP/1.1" 200 - 0.0003
+[2015-02-12 10:17:33] ERROR bad URI `/../../../../../../etc/password'.
+[2015-02-12 10:17:37] ERROR bad URI `/../../../../../../etc/passwd'.
+[2015-02-12 10:17:43] ERROR bad URI `/../../../../../etc/passwd'.
+```
 
 * Reference: [http served file](https://practicingruby.com/articles/implementing-an-http-file-server)
