@@ -1,6 +1,7 @@
 ##### Ruby lab
 
 * [Ruby on Rails](http://railsforzombies.org)
+* [Good Rails Documents](https://www.railstutorial.org/book)
 
 ##### How to install Ruby on Rails
 
